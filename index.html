@@ -313,6 +313,16 @@ a.irow:hover b{text-decoration:underline}
 .m-post img{width:4.4em;height:4.4em;object-fit:cover;border-radius:.5em;flex:none}
 .m-post b{display:block;font-weight:500;font-size:.72em;line-height:1.3}
 .m-post .m-kick{display:block;margin-bottom:.25em}
+
+/* ---------- price breakdown ---------- */
+.plist h4{display:flex;align-items:center;gap:10px;margin:0 0 6px;font:700 13px/1 'Montserrat',sans-serif;color:#444}
+.plist h4 .sev{margin:0}
+.prow{display:grid;grid-template-columns:30px minmax(0,1fr) auto 58px;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid #d3d3d3;font-size:14px;line-height:1.35}
+.prow i{font:800 12px/1 'Montserrat',sans-serif;font-style:normal;color:#8a8a8a}
+.prow em{font-style:normal;font-size:12.5px;color:#777;white-space:nowrap}
+.prow b{font:800 14.5px/1 'Montserrat',sans-serif;text-align:right;white-space:nowrap}
+.ptotal{display:flex;justify-content:space-between;padding:14px 0 0;font:800 17px/1 'Montserrat',sans-serif}
+@media (max-width:640px){.prow{grid-template-columns:24px minmax(0,1fr) 52px}.prow em{display:none}}
 </style>
 </head>
 <body>
@@ -379,7 +389,7 @@ a.irow:hover b{text-decoration:underline}
       </div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
       <div class="card"><p>Відвідувач із першої секунди розуміє, що це за подія, коли вона відбудеться і як записатися.</p>
-        <div class="stats"><div><b>1 екран</b><span>до першої цільової дії</span></div><div><b>£180 · 2.10</b><span>видно без гортання</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$150</b></div></div>
+        <div class="stats"><div><b>1 екран</b><span>до першої цільової дії</span></div><div><b>£180 · 2.10</b><span>видно без гортання</span></div></div></div><div class="ptag"><span>Вартість</span><b>$200</b><em>5 год роботи · $40/год</em></div></div>
   </div>
 </section>
 <section class="slide" id="p02">
@@ -396,7 +406,7 @@ a.irow:hover b{text-decoration:underline}
       <div class="view"><img class="shot" src="img/now-hero.jpg" alt=""><div class="m-cookie"><span>We use cookies to improve your experience.</span><b>Accept</b></div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
       <div class="card"><p>Перше враження — ваш заголовок і фото, а не технічне вікно, яке хочеться закрити разом із сайтом.</p>
-        <div class="stats"><div><b>1 рядок</b><span>замість половини екрана</span></div><div><b>0</b><span>перекритого контенту</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$50</b></div></div>
+        <div class="stats"><div><b>1 рядок</b><span>замість половини екрана</span></div><div><b>0</b><span>перекритого контенту</span></div></div></div><div class="ptag"><span>Вартість</span><b>$80</b><em>2 год роботи · $40/год</em></div></div>
   </div>
 </section>
 <section class="slide" id="p03">
@@ -430,7 +440,7 @@ a.irow:hover b{text-decoration:underline}
       </div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
       <div class="card"><p>Людина бронює там, де її вже переконали тексти й відгуки, — без переходу на порожню сторінку і без зайвих сумнівів.</p>
-        <div class="stats"><div><b>−1 перехід</b><span>між рішенням і оплатою</span></div><div><b>Усі деталі</b><span>поруч із кнопкою</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$300</b></div></div>
+        <div class="stats"><div><b>−1 перехід</b><span>між рішенням і оплатою</span></div><div><b>Усі деталі</b><span>поруч із кнопкою</span></div></div></div><div class="ptag"><span>Вартість</span><b>$240</b><em>6 год роботи · $40/год</em></div></div>
   </div>
 </section>
 
@@ -443,7 +453,7 @@ a.irow:hover b{text-decoration:underline}
     <div class="txt t2"><div class="lbl"><span class="pill">Пропонуємо</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p><b>Одне джерело дати</b> для всіх сторінок: скрізь «Friday, 2 October · 10:30–13:00».</p></div>
     <div class="v2"><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/now-september.jpg" alt=""><div class="ov-fix" style="top:122cqw">📅 Friday, 2 October · 10:30–13:00</div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>У момент оплати людина не сумнівається, що бронює правильний воркшоп на правильну дату.</p><div class="stats"><div><b>1 дата</b><span>однакова на всіх сторінках</span></div><div><b>0 сумнівів</b><span>у момент оплати</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$50</b></div></div>
+      <div class="card"><p>У момент оплати людина не сумнівається, що бронює правильний воркшоп на правильну дату.</p><div class="stats"><div><b>1 дата</b><span>однакова на всіх сторінках</span></div><div><b>0 сумнівів</b><span>у момент оплати</span></div></div></div><div class="ptag"><span>Вартість</span><b>$40</b><em>1 год роботи · $40/год</em></div></div>
   </div>
 </section>
 
@@ -480,7 +490,7 @@ a.irow:hover b{text-decoration:underline}
       </div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
       <div class="card"><p>Зацікавлені люди не губляться: наступну дату можна заповнювати з власної бази, а не лише з нової реклами.</p>
-        <div class="stats"><div><b>+1 контакт</b><span>замість втраченого візиту</span></div><div><b>0 нових сервісів</b><span>Klaviyo вже встановлено</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$250</b></div></div>
+        <div class="stats"><div><b>+1 контакт</b><span>замість втраченого візиту</span></div><div><b>0 нових сервісів</b><span>Klaviyo вже встановлено</span></div></div></div><div class="ptag"><span>Вартість</span><b>$320</b><em>8 год роботи · $40/год</em></div></div>
   </div>
 </section>
 
@@ -497,7 +507,7 @@ a.irow:hover b{text-decoration:underline}
         <div class="m-field">Name</div><div class="m-field">Email *</div><div class="m-field tall">Your question</div>
         <span class="m-btn">Send</span><span class="m-btn out">Free 15-min consultation</span></div></div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>Ні відвідувачі, ні Google не бачать недороблених сторінок — сайт виглядає завершеним і надійним.</p><div class="stats"><div><b>3 сторінки</b><span>contact · bread-course · Test article</span></div><div><b>0</b><span>заглушок у пошуку Google</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$100</b></div></div>
+      <div class="card"><p>Ні відвідувачі, ні Google не бачать недороблених сторінок — сайт виглядає завершеним і надійним.</p><div class="stats"><div><b>3 сторінки</b><span>contact · bread-course · Test article</span></div><div><b>0</b><span>заглушок у пошуку Google</span></div></div></div><div class="ptag"><span>Вартість</span><b>$120</b><em>3 год роботи · $40/год</em></div></div>
   </div>
 </section>
 
@@ -522,7 +532,7 @@ a.irow:hover b{text-decoration:underline}
       <div class="row"><span>H1 на головній</span><em class="ok">1</em></div>
       <div class="row"><span>Ключові слова в title</span><em class="ok">є</em></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>Сайт знаходять ті, хто шукає таку практику в Лондоні, — а не лише ті, хто вже знає імʼя Ліни.</p><div class="stats"><div><b>1 H1</b><span>з назвою практики</span></div><div><b>Title</b><span>з послугою й містом</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$50</b></div></div>
+      <div class="card"><p>Сайт знаходять ті, хто шукає таку практику в Лондоні, — а не лише ті, хто вже знає імʼя Ліни.</p><div class="stats"><div><b>1 H1</b><span>з назвою практики</span></div><div><b>Title</b><span>з послугою й містом</span></div></div></div><div class="ptag"><span>Вартість</span><b>$80</b><em>2 год роботи · $40/год</em></div></div>
   </div>
 </section>
 
@@ -536,7 +546,7 @@ a.irow:hover b{text-decoration:underline}
     <div class="txt t2"><div class="lbl"><span class="pill">Пропонуємо</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div><p>Зробити поле <b>необовʼязковим</b> або коротко пояснити, навіщо телефон. Якщо він не критичний — збирати після оплати (питання 06).</p></div>
     <div class="v2"><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/now-product.jpg" alt=""><div class="ov-field" style="top:116cqw"><span>Phone number&nbsp;<i>(optional)</i></span></div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>Менше причин зупинитися перед оплатою — і немає відчуття, що в тебе збирають зайве.</p><div class="stats"><div><b>−1 поле</b><span>обовʼязкове до оплати</span></div><div><b>Пояснення</b><span>якщо телефон потрібен</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$50</b></div></div>
+      <div class="card"><p>Менше причин зупинитися перед оплатою — і немає відчуття, що в тебе збирають зайве.</p><div class="stats"><div><b>−1 поле</b><span>обовʼязкове до оплати</span></div><div><b>Пояснення</b><span>якщо телефон потрібен</span></div></div></div><div class="ptag"><span>Вартість</span><b>$40</b><em>1 год роботи · $40/год</em></div></div>
   </div>
 </section>
 
@@ -556,7 +566,7 @@ a.irow:hover b{text-decoration:underline}
         <div class="m-price">£180.00 <small>GBP</small></div>
         <div class="m-fine" style="text-align:left">linaburduk.com/products/return-to-yourself-workshop</div></div></div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>Назва сама пояснює, що це й де, — на сторінці, у кошику та в листі-підтвердженні.</p><div class="stats"><div><b>0 помилок</b><span>у назві</span></div><div><b>1 адреса</b><span>сторінки = назва</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$50</b></div></div>
+      <div class="card"><p>Назва сама пояснює, що це й де, — на сторінці, у кошику та в листі-підтвердженні.</p><div class="stats"><div><b>0 помилок</b><span>у назві</span></div><div><b>1 адреса</b><span>сторінки = назва</span></div></div></div><div class="ptag"><span>Вартість</span><b>$40</b><em>1 год роботи · $40/год</em></div></div>
   </div>
 </section>
 
@@ -575,7 +585,7 @@ a.irow:hover b{text-decoration:underline}
         <span class="m-btn">Book your place</span>
         <img class="m-photo grow" src="img/photo-hall.jpg" alt="" style="margin:.8em 0 0"></div></div><div class="m-sticky"><div><b>Return to Yourself</b><span>Fri 2 Oct · £180 · 8–10 places</span></div><a>Book</a></div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>Справжня обмеженість групи — найсильніший чесний аргумент записатися зараз, і він стоїть там, де приймається рішення.</p><div class="stats"><div><b>8–10 місць</b><span>поруч із кожною кнопкою</span></div><div><b>Реальні</b><span>цифри, без вигаданих</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$50</b></div></div>
+      <div class="card"><p>Справжня обмеженість групи — найсильніший чесний аргумент записатися зараз, і він стоїть там, де приймається рішення.</p><div class="stats"><div><b>8–10 місць</b><span>поруч із кожною кнопкою</span></div><div><b>Реальні</b><span>цифри, без вигаданих</span></div></div></div><div class="ptag"><span>Вартість</span><b>$120</b><em>3 год роботи · $40/год</em></div></div>
   </div>
 </section>
 
@@ -606,7 +616,7 @@ a.irow:hover b{text-decoration:underline}
       </div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
       <div class="card"><p>Відгуки стають доказом, якому вірять. Для практики, де людина відкривається, це особливо важливо.</p>
-        <div class="stats"><div><b>6 відгуків</b><span>уже є — писати нічого не треба</span></div><div><b>+ фото й дата</b><span>до кожного</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$100</b></div></div>
+        <div class="stats"><div><b>6 відгуків</b><span>уже є — писати нічого не треба</span></div><div><b>+ фото й дата</b><span>до кожного</span></div></div></div><div class="ptag"><span>Вартість</span><b>$200</b><em>5 год роботи · $40/год</em></div></div>
   </div>
 </section>
 
@@ -622,7 +632,7 @@ a.irow:hover b{text-decoration:underline}
       <div class="row" style="display:block"><span>/collections/online-sessions-dmt</span><br><em class="warn">прибрати або наповнити</em></div>
       <div class="row" style="display:block;font-size:12px;color:#666">Якщо онлайн-сесії є — це доступніший формат для тих, хто не в Лондоні.</div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>Людина не натрапляє на «No products found» і не шукає формат, якого немає.</p><div class="stats"><div><b>2 колекції</b><span>прибрати або наповнити</span></div><div><b>0</b><span>порожніх сторінок у Google</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$50</b></div></div>
+      <div class="card"><p>Людина не натрапляє на «No products found» і не шукає формат, якого немає.</p><div class="stats"><div><b>2 колекції</b><span>прибрати або наповнити</span></div><div><b>0</b><span>порожніх сторінок у Google</span></div></div></div><div class="ptag"><span>Вартість</span><b>$40</b><em>1 год роботи · $40/год</em></div></div>
   </div>
 </section>
 
@@ -643,7 +653,7 @@ a.irow:hover b{text-decoration:underline}
         <div class="m-card" style="background:#F6F6F6"><b>Returning to yourself</b><p>Come back to yourself — your softness, your spontaneity and sensuality</p></div>
         <span class="m-btn" style="margin-top:.6em">Book your place</span></div></div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>Читачка лишається там, де читала, і не губить місце на довгій сторінці.</p><div class="stats"><div><b>0</b><span>перезавантажень сторінки</span></div><div><b>1 дотик</b><span>щоб розкрити текст</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$50</b></div></div>
+      <div class="card"><p>Читачка лишається там, де читала, і не губить місце на довгій сторінці.</p><div class="stats"><div><b>0</b><span>перезавантажень сторінки</span></div><div><b>1 дотик</b><span>щоб розкрити текст</span></div></div></div><div class="ptag"><span>Вартість</span><b>$40</b><em>1 год роботи · $40/год</em></div></div>
   </div>
 </section>
 
@@ -661,7 +671,7 @@ a.irow:hover b{text-decoration:underline}
       <div class="view"><img class="shot" src="img/now-screen2.jpg" alt=""><div class="m-sticky"><div><b>Return to Yourself</b><span>Fri 2 Oct · £180 · 8–10 places</span></div><a>Book</a></div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
       <div class="card"><p>Записатися можна з будь-якого місця сторінки — саме в ту мить, коли рішення вже прийняте.</p>
-        <div class="stats"><div><b>1 дотик</b><span>до бронювання з будь-якого блоку</span></div><div><b>Уся сторінка</b><span>з кнопкою на екрані</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$100</b></div></div>
+        <div class="stats"><div><b>1 дотик</b><span>до бронювання з будь-якого блоку</span></div><div><b>Уся сторінка</b><span>з кнопкою на екрані</span></div></div></div><div class="ptag"><span>Вартість</span><b>$160</b><em>4 год роботи · $40/год</em></div></div>
   </div>
 </section>
 
@@ -680,7 +690,7 @@ a.irow:hover b{text-decoration:underline}
           <div class="hl" style="font-size:.62em;margin-top:.8em">Country &amp; currency selector removed — workshop in London, prices in £</div>
           <span class="m-btn" style="margin-top:.8em">Book your place — £180</span></div></div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>Шапка й меню простіші, і ніхто не думає, що це онлайн-формат для будь-якої країни.</p><div class="stats"><div><b>−30+ країн</b><span>у виборі</span></div><div><b>EN / RU</b><span>лишається</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$50</b></div></div>
+      <div class="card"><p>Шапка й меню простіші, і ніхто не думає, що це онлайн-формат для будь-якої країни.</p><div class="stats"><div><b>−30+ країн</b><span>у виборі</span></div><div><b>EN / RU</b><span>лишається</span></div></div></div><div class="ptag"><span>Вартість</span><b>$40</b><em>1 год роботи · $40/год</em></div></div>
   </div>
 </section>
 
@@ -696,7 +706,7 @@ a.irow:hover b{text-decoration:underline}
     <div class="v2"><div class="viz"><h4>Після змін</h4><div class="code ok">https://…</div>
       <div class="share"><div class="share-img" style="background-image:url(img/photo-hug.jpg)"></div><div class="share-body"><b>Lina Burduk</b><span>Dance Movement Therapy (DMT) with Lina Burduk is a profound psychological practice that…</span></div></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>Лінк на сайт у месенджерах і соцмережах показується з фото — і по ньому хочеться клікнути.</p><div class="stats"><div><b>https</b><span>для картинки прев'ю</span></div><div><b>1 фото</b><span>у кожному поширенні</span></div></div></div><div class="ptag"><span>Орієнтовна вартість</span><b>$50</b></div></div>
+      <div class="card"><p>Лінк на сайт у месенджерах і соцмережах показується з фото — і по ньому хочеться клікнути.</p><div class="stats"><div><b>https</b><span>для картинки прев'ю</span></div><div><b>1 фото</b><span>у кожному поширенні</span></div></div></div><div class="ptag"><span>Вартість</span><b>$40</b><em>1 год роботи · $40/год</em></div></div>
   </div>
 </section>
 <!-- ============ BLOG ============ -->
@@ -792,11 +802,10 @@ a.irow:hover b{text-decoration:underline}
   <div class="price">
     <div class="pcol">
     <div class="pbox">
-      <span class="pill">Інвестиція</span>
-      <div class="sum">$1,500</div>
-      <p>Односторінковий лендинг, що продає воркшоп: дизайн + розробка.</p>
-      <div class="terms"><span>2 раунди правок</span><span>1 тиждень</span></div>
-      <p class="pnote">Орієнтовна вартість кожної зміни — на її слайді (01–16), разом — $1,500.</p>
+      <span class="pill">Усі 16 змін</span>
+      <div class="sum">$1,800</div>
+      <p>Фіксована ставка $40/год · 45 годин роботи. Ціна кожної зміни — на її слайді.</p>
+      <div class="terms"><span>Критичні — $1,000</span><span>Важливі — $800</span><span>2 раунди правок</span><span>1 тиждень</span></div>
     </div>
     <div class="pbox alt">
       <span class="pill">Окремо: блог</span>
@@ -805,16 +814,11 @@ a.irow:hover b{text-decoration:underline}
       <div class="terms"><span>4 статті на місяць — $1,000</span></div>
     </div>
     </div>
-    <ul class="incl">
-      <li>Одна сторінка замість нинішніх 15 — усі 13 блоків із ваших текстів</li>
-      <li>Бронювання прямо на сторінці, без переходу на порожню сторінку товару</li>
-      <li>Закріплена панель бронювання з ціною й кількістю місць — на компʼютері й телефоні</li>
-      <li>Cookie-банер, який не закриває перший екран</li>
-      <li>Події нового лендингу (перегляд, бронювання, оплата) — у вже встановлені Meta Pixel, Google Analytics і Klaviyo</li>
-      <li>Klaviyo: форма й 3 сценарії листів — очікування, незавершене оформлення, запит відгуку</li>
-      <li>SEO: H1, title з ключовими словами, https для прев'ю в соцмережах, без заглушок</li>
-      <li>Адаптив під телефон, планшет і компʼютер (390 / 768 / 1440 px)</li>
-    </ul>
+    <div class="plist">
+      <h4><span class="sev crit">Критично</span> 25 год · $1,000</h4><div class="prow"><i>01</i><span>Перший екран: кнопка бронювання, ціна £180, дата й докази</span><em>5 год</em><b>$200</b></div><div class="prow"><i>02</i><span>Cookie-вікно → тонкий банер унизу, що не перекриває сайт</span><em>2 год</em><b>$80</b></div><div class="prow"><i>03</i><span>Сторінка бронювання: дата, час, адреса, що входить, місця, умови повернення</span><em>6 год</em><b>$240</b></div><div class="prow"><i>04</i><span>Прибрати «Starts in September» і звірити всі дати на сайті</span><em>1 год</em><b>$40</b></div><div class="prow"><i>05</i><span>Klaviyo: форма, лист очікування і 3 сценарії листів</span><em>8 год</em><b>$320</b></div><div class="prow"><i>06</i><span>Прибрати заглушки й «Test article», зробити справжню сторінку контактів</span><em>3 год</em><b>$120</b></div>
+      <h4 style="margin-top:22px"><span class="sev imp">Важливо</span> 20 год · $800</h4><div class="prow"><i>07</i><span>SEO: H1 і title з ключовими словами</span><em>2 год</em><b>$80</b></div><div class="prow"><i>08</i><span>Поле «Phone number *» — необовʼязкове або з поясненням</span><em>1 год</em><b>$40</b></div><div class="prow"><i>09</i><span>Назва товару: помилка, подвійний пробіл, адреса сторінки</span><em>1 год</em><b>$40</b></div><div class="prow"><i>10</i><span>Кількість місць біля кожної кнопки й на сторінці товару</span><em>3 год</em><b>$120</b></div><div class="prow"><i>11</i><span>Відгуки: фото, зірки й дати для 6 наявних відгуків</span><em>5 год</em><b>$200</b></div><div class="prow"><i>12</i><span>Прибрати 2 порожні колекції з сайту й sitemap</span><em>1 год</em><b>$40</b></div><div class="prow"><i>13</i><span>Виправити «Read more», що перезавантажує головну</span><em>1 год</em><b>$40</b></div><div class="prow"><i>14</i><span>Закріплена панель бронювання з ціною й місцями (компʼютер + телефон)</span><em>4 год</em><b>$160</b></div><div class="prow"><i>15</i><span>Прибрати вибір із 30+ країн</span><em>1 год</em><b>$40</b></div><div class="prow"><i>16</i><span>og:image через https + перевірка прев'ю в Instagram, Facebook, WhatsApp</span><em>1 год</em><b>$40</b></div>
+      <div class="ptotal"><span>Разом</span><span>45 год · $1,800</span></div>
+    </div>
   </div>
 </section>
 
