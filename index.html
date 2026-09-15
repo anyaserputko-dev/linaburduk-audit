@@ -292,6 +292,11 @@ a.irow:hover b{text-decoration:underline}
 .share-body span{display:block;font-size:11.5px;color:#666;margin-top:2px}
 @media (max-width:1100px){.good.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.good.four{grid-template-columns:minmax(0,1fr)}}
+
+.divider{min-height:440px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.divider h2{margin:0;font-weight:800;font-size:clamp(44px,7.4vw,100px);line-height:.98;text-transform:uppercase;letter-spacing:-.01em}
+.divider .sev{font-size:13px;padding:8px 12px;margin-bottom:22px}
+@media (max-width:640px){.divider{min-height:300px}}
 </style>
 </head>
 <body>
@@ -328,10 +333,10 @@ a.irow:hover b{text-decoration:underline}
   </div>
 </section>
 <!-- ============ CRITICAL ============ -->
-<section class="slide" id="critical">
-  <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><h2><span class="sev crit">Критично</span>9 критичних проблем — у першу чергу<small>Через них сайт втрачає бронювання вже зараз. Кожну розібрано далі на слайдах 01–09 з макетом «зараз / пропонуємо».</small></h2></div>
-  <div class="crit-grid"><a class="ccard" href="#p01"><div class="top"><span class="n">01</span><span class="go">до слайда ↓</span></div><b>На першому екрані немає кнопки</b><p class="now">Заголовок і фото — без ціни, дати й кнопки бронювання.</p><p class="do">дата, ціна й кнопка «Book your place — £180» одразу на першому екрані.</p></a><a class="ccard" href="#p02"><div class="top"><span class="n">02</span><span class="go">до слайда ↓</span></div><b>Cookie-вікно закриває сайт</b><p class="now">При першому візиті затемнює сторінку й займає понад половину екрана телефона.</p><p class="do">тонка смуга внизу, яка не перекриває контент.</p></a><a class="ccard" href="#p03"><div class="top"><span class="n">03</span><span class="go">до слайда ↓</span></div><b>Кнопка веде на порожню сторінку</b><p class="now">Опис товару — 0 символів: ні дати, ні адреси, ні умов.</p><p class="do">бронювання прямо на сторінці з усіма деталями поруч із кнопкою.</p></a><a class="ccard" href="#p04"><div class="top"><span class="n">04</span><span class="go">до слайда ↓</span></div><b>«Starts in September» на сторінці оплати</b><p class="now">А воркшоп — 2 жовтня. Суперечить шапці, головній і назві.</p><p class="do">одне джерело дати для всіх сторінок.</p></a><a class="ccard" href="#p05"><div class="top"><span class="n">05</span><span class="go">до слайда ↓</span></div><b>Немає аналітики й пікселів</b><p class="now">Ні Meta Pixel, ні GA4, ні GTM — реклама наосліп.</p><p class="do">GA4 + Meta Pixel + Conversions API.</p></a><a class="ccard" href="#p06"><div class="top"><span class="n">06</span><span class="go">до слайда ↓</span></div><b>Klaviyo є, але нічого не збирає</b><p class="now">На всьому сайті немає жодного поля для email.</p><p class="do">форма + лист очікування + 3 автоматичні листи.</p></a><a class="ccard" href="#p07"><div class="top"><span class="n">07</span><span class="go">до слайда ↓</span></div><b>Сторінки-заглушки в Google</b><p class="now">«Placeholder heading» на /pages/contact і /pages/bread-course, «Test article» у блозі.</p><p class="do">видалити або заповнити до запуску реклами.</p></a><a class="ccard" href="#p08"><div class="top"><span class="n">08</span><span class="go">до слайда ↓</span></div><b>Інший бізнес на тому ж домені</b><p class="now">/pages/about-me і /pages/courses — про безглютенову випічку.</p><p class="do">окремий домен або чітко відокремлений розділ.</p></a><a class="ccard" href="#p09"><div class="top"><span class="n">09</span><span class="go">до слайда ↓</span></div><b>Телефон: 6,6 с до головного екрана</b><p class="now">PageSpeed мобільний — 68/100, на компʼютері — 100/100.</p><p class="do">стиснути фото, відкласти скрипти — ціль до 2,5 с.</p></a></div>
+<section class="slide divider" id="critical">
+  <img class="silk" src="img/silk.png" alt="">
+  <span class="sev crit">Критично</span>
+  <h2>9 критичних<br>проблем</h2>
 </section>
 <section class="slide" id="p01">
   <img class="silk sm" src="img/silk.png" alt="">
@@ -548,10 +553,10 @@ a.irow:hover b{text-decoration:underline}
   </div>
 </section>
 <!-- ============ IMPORTANT ============ -->
-<section class="slide" id="important">
-  <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><h2><span class="sev imp">Важливо</span>10 важливих змін — другою чергою<small>Не блокують бронювання, але помітно посилюють довіру й конверсію. Кожну розібрано далі на слайдах 10–19.</small></h2></div>
-  <div class="imp-grid"><a class="irow" href="#p10"><i>10</i><div><b>Немає H1, title — просто «Lina Burduk»</b><span>Робимо: H1 і title з назвою практики й містом.</span></div></a><a class="irow" href="#p11"><i>11</i><div><b>Обовʼязкове «Phone number *» перед кошиком</b><span>Робимо: необовʼязкове поле або пояснення, навіщо телефон.</span></div></a><a class="irow" href="#p12"><i>12</i><div><b>Назва «Workshop October 2d»</b><span>Робимо: описова назва й відповідна адреса сторінки.</span></div></a><a class="irow" href="#p13"><i>13</i><div><b>Обмеженість місць не видно</b><span>Робимо: 8–10 місць поруч із кожною кнопкою.</span></div></a><a class="irow" href="#p14"><i>14</i><div><b>Відгуки без облич і дат</b><span>Робимо: фото або імʼя з ініціалом (за згодою), дата.</span></div></a><a class="irow" href="#p15"><i>15</i><div><b>Дві порожні колекції в Google</b><span>Робимо: прибрати або наповнити онлайн-форматом.</span></div></a><a class="irow" href="#p16"><i>16</i><div><b>«Read more» веде на головну</b><span>Робимо: розкривати текст на місці.</span></div></a><a class="irow" href="#p17"><i>17</i><div><b>Немає закріпленої кнопки бронювання</b><span>Робимо: панель із ціною й місцями внизу екрана.</span></div></a><a class="irow" href="#p18"><i>18</i><div><b>Вибір із 30+ країн — усі в £</b><span>Робимо: прибрати, лишити EN / RU.</span></div></a><a class="irow" href="#p19"><i>19</i><div><b>Прев'ю для соцмереж через http://</b><span>Робимо: перевести картинку на https.</span></div></a></div>
+<section class="slide divider" id="important">
+  <img class="silk" src="img/silk.png" alt="">
+  <span class="sev imp">Важливо</span>
+  <h2>10 важливих<br>змін</h2>
 </section>
 
 <section class="slide" id="p10">
