@@ -323,6 +323,21 @@ a.irow:hover b{text-decoration:underline}
 .prow b{font:800 14.5px/1 'Montserrat',sans-serif;text-align:right;white-space:nowrap}
 .ptotal{display:flex;justify-content:space-between;padding:14px 0 0;font:800 17px/1 'Montserrat',sans-serif}
 @media (max-width:640px){.prow{grid-template-columns:24px minmax(0,1fr) 52px}.prow em{display:none}}
+
+/* ---------- AI blog ---------- */
+.m-q{display:flex;gap:.55em;align-items:flex-start;background:#fff;border:1px solid #eee;border-radius:.7em;padding:.55em .6em;margin-bottom:.45em}
+.m-q i{font-style:normal;font-weight:700;font-size:.58em;color:#999;padding-top:.15em}
+.m-q div{flex:1;min-width:0}
+.m-q b{display:block;font-weight:500;font-size:.64em;line-height:1.3}
+.m-q span{display:block;font-size:.52em;color:#888;margin-top:.2em}
+.m-q em{font-style:normal;font-weight:600;font-size:.5em;border-radius:2em;padding:.35em .6em;white-space:nowrap}
+.m-q em.pub{background:#E7F3EC;color:#2E8B57}
+.m-q em.draft{background:#F1F1F1;color:#555}
+.m-q em.now{background:#FFF4E8;color:#9A5B12}
+.m-daily{font-size:.6em;text-align:center;background:#111;color:#fff;border-radius:2em;padding:.7em}
+.bincl{list-style:none;margin:14px 0 0;padding:0}
+.bincl li{display:flex;gap:10px;font-size:14px;padding:6px 0;border-bottom:1px solid #eee;color:#333}
+.bincl li::before{content:"✓";color:var(--green);font-weight:800;flex:none}
 </style>
 </head>
 <body>
@@ -710,17 +725,22 @@ a.irow:hover b{text-decoration:underline}
       <p>У блозі один пост — <b>«Test article»</b> від 31.08.2026, у ньому лише «Placeholder label» і «Article content».</p><p>Статей, які відповідали б на питання людей перед записом, на сайті немає.</p></div>
     <div class="v1"><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><img class="shot" src="img/now-blog.jpg" alt="Єдиний пост у блозі — Test article"></div><div class="url"><span>linaburduk.com</span></div></div></div><div class="cap">/blogs/news/test-article</div></div>
     <div class="txt t2"><div class="lbl"><span class="pill">Пропонуємо</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
-      <p><b>Автоматичний блог:</b> система сама знаходить, що шукають люди перед записом, пише SEO-статті англійською вашим голосом і щодня публікує їх у блозі Shopify.</p><p>Теми — ті самі питання: чи треба вміти танцювати, як тіло тримає стрес, як практика доповнює консультування. У кожній статті — кнопка на воркшоп.</p></div>
-    <div class="v2"><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><div class="mock"><div class="m-ann">Next Workshop 2 October!</div><div class="m-hdr"><svg class="ic" viewBox="0 0 20 20"><path d="M3 5h14M3 10h14M3 15h14" stroke="#111" stroke-width="1.4"/></svg><img src="img/site-logo.jpg" alt=""><span class="lang">EN ⌄</span></div><div class="m-pad col grow">
-        <div class="m-h2">Journal</div>
-        <div class="m-post"><img src="img/photo-hall.jpg" alt=""><div><span class="m-kick">Dance Movement Therapy</span><b>Do you need to know how to dance to join a DMT workshop?</b></div></div>
-        <div class="m-post"><img src="img/photo-hug.jpg" alt=""><div><span class="m-kick">Body &amp; stress</span><b>How the body holds stress — and how movement helps let it go</b></div></div>
-        <div class="m-post"><div><span class="m-kick">Therapy</span><b>Dance movement therapy and talking therapy: how they work together</b></div></div>
+      <p><b>AI Blog Automation</b> — щодня публікує SEO-статті без вашої участі.</p><p>Система вивчає вашу нішу й аудиторію, бере актуальні факти й джерела через Perplexity, пише статті вашим голосом, генерує зображення і сама публікує їх у блозі Shopify. Можна спершу в Чернетки — публікуєте лише те, що сподобалось.</p></div>
+    <div class="v2"><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div><div class="view"><div class="mock" style="background:#FAFAFA"><div class="m-pad col grow">
+        <div class="m-kick">Today's queue</div>
+        <div class="m-title" style="margin-bottom:.7em">Writing for Lina Burduk</div>
+        <div class="m-q"><i>01</i><div><b>Do you need to know how to dance to join a DMT workshop?</b><span>Research-backed · SEO</span></div><em class="pub">Published</em></div>
+        <div class="m-q"><i>02</i><div><b>How the body holds stress — and how movement helps let it go</b><span>How-to · images</span></div><em class="pub">Published</em></div>
+        <div class="m-q"><i>03</i><div><b>Dance movement therapy and talking therapy: how they work together</b><span>Comparison</span></div><em class="draft">Draft</em></div>
+        <div class="m-q"><i>04</i><div><b>What to expect at your first embodied movement workshop</b><span>Guide</span></div><em class="now">Writing now</em></div>
+        <div class="m-q"><i>05</i><div><b>Is it safe to join with back pain or old injuries?</b><span>FAQ · answer-first</span></div><em class="draft">Draft</em></div>
+        <div class="m-q"><i>06</i><div><b>Why talking about stress isn’t always enough</b><span>Research-backed</span></div><em class="draft">Queued</em></div>
         <div style="flex:1"></div>
-        <span class="m-btn">Book your place — £180</span></div></div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
+        <div class="m-daily">365 articles a year · daily</div>
+      </div></div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>Статті знімають сумніви ще до запису, дають сайту сторінки, які можна знайти в Google, і готовий матеріал для листів та соцмереж.</p>
-        <div class="stats"><div><b>365 статей</b><span>на рік — нова щодня</span></div><div><b>Ваш голос</b><span>тексти в стилі бренду</span></div></div></div><div class="ptag"><span>Вартість</span><b>$750 <small>+ $30/міс</small></b><em>запуск + щомісячна робота системи</em></div></div>
+      <div class="card"><p>Ваші статті цитують ChatGPT, Perplexity і Google AI Overviews, а люди знаходять відповіді на свої питання ще до запису — без жодної роботи з вашого боку.</p>
+        <div class="stats"><div><b>365 статей</b><span>на рік — нова щодня</span></div><div><b>~$3</b><span>за статтю проти ~$100 у копірайтера</span></div></div></div><div class="ptag"><span>Вартість</span><b>$750 <small>+ $30/міс</small></b><em>разове налаштування · перший рік — $1,110</em></div></div>
   </div>
 </section>
 
@@ -793,10 +813,18 @@ a.irow:hover b{text-decoration:underline}
       <div class="terms"><span>Критичні — $770</span><span>Важливі — $520</span><span>2 раунди правок</span><span>1 тиждень</span></div>
     </div>
     <div class="pbox alt">
-      <span class="pill">Окремо: автоматичний блог</span>
+      <span class="pill">Окремо: AI Blog Automation</span>
       <div class="sum">$750 <small>+ $30/міс</small></div>
-      <p>Система сама знаходить, що шукають ваші клієнти, пише SEO-статті англійською вашим голосом і щодня публікує їх у блозі Shopify.</p>
-      <div class="terms"><span>365 статей на рік</span><span>Ваш голос бренду</span><span>Запуск $750 · далі $30/міс</span></div>
+      <p>Щоденні SEO-статті у ваш блог Shopify без вашої участі. $750 — разове налаштування системи під вашу нішу, далі вона працює сама. Перший рік — $1,110, ~$3 за статтю.</p>
+      <ul class="bincl">
+        <li>Навчання на голосі бренду: ваш сайт і воркшопи</li>
+        <li>Стратегія ключових слів для ніші</li>
+        <li>Підключення до блогу Shopify</li>
+        <li>AI-модель і актуальні дані досліджень</li>
+        <li>Зображення до кожної статті</li>
+        <li>Графік публікацій, черга чернеток і запуск під нашим контролем</li>
+      </ul>
+      <div class="terms"><span>365 статей на рік</span><span>Чернетки або автопублікація</span><span>Перші цитування в AI-пошуку — зазвичай за 2–4 тижні</span></div>
     </div>
     </div>
     <div class="plist">
