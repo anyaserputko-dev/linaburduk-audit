@@ -199,6 +199,31 @@ h1,h2,h3,.mont{font-family:'Montserrat',Arial,sans-serif}
 .end p{max-width:640px;margin:0 auto;color:#444}
 .fine{max-width:760px;margin:28px auto 0!important;font-size:12.5px;color:#777!important}
 
+
+/* ---------- severity ---------- */
+.sev{display:block;width:max-content;font:800 11px/1 'Montserrat',sans-serif;letter-spacing:.1em;text-transform:uppercase;border-radius:6px;padding:6px 9px;margin-bottom:10px}
+.sev.crit{background:var(--red);color:#fff}
+.sev.imp{background:#FFF4E8;color:#9A5B12;border:1.5px solid var(--orange)}
+.crit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ccard{display:flex;flex-direction:column;background:#fff;border-radius:14px;border-top:4px solid var(--red);padding:16px 18px 16px;box-shadow:0 10px 26px rgba(0,0,0,.07);color:inherit;text-decoration:none;transition:transform .15s}
+.ccard:hover{transform:translateY(-2px)}
+.ccard .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.ccard .n{font:800 24px/1 'Montserrat',sans-serif;color:var(--red)}
+.ccard .go{font:600 11px/1 'Montserrat',sans-serif;color:#888}
+.ccard b{font:700 15px/1.3 'Montserrat',sans-serif;margin-bottom:6px}
+.ccard .now{margin:0 0 12px;font-size:13px;color:#555;line-height:1.45}
+.ccard .do{margin:auto 0 0;font-size:13px;line-height:1.45;background:#F3F1EE;border-radius:8px;padding:9px 11px;color:#1f1f1f}
+.ccard .do::before{content:"Робимо: ";font-weight:700}
+.imp-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 26px}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid #d3d3d3}
+.irow i{font:800 13px/1 'Montserrat',sans-serif;font-style:normal;min-width:30px;text-align:center;border:2px solid var(--orange);color:#9A5B12;border-radius:7px;padding:6px 5px;background:#FFF4E8;flex:none}
+.irow>div{min-width:0;overflow-wrap:anywhere}
+.irow b{display:block;font:700 14.5px/1.3 'Montserrat',sans-serif;margin-bottom:4px}
+.irow span{display:block;font-size:13.5px;color:#444;line-height:1.45}
+.irow em{font-style:normal;font:600 11px/1 'Montserrat',sans-serif;color:#888;white-space:nowrap;margin-left:4px}
+@media (max-width:1100px){.crit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.crit-grid,.imp-grid{grid-template-columns:minmax(0,1fr)}}
+
 /* ---------- responsive ---------- */
 @media (max-width:1100px){
   .slide{padding:54px 32px 60px}
@@ -241,7 +266,9 @@ h1,h2,h3,.mont{font-family:'Montserrat',Arial,sans-serif}
   <nav class="toc">
     <a href="#summary">Коротко</a>
     <a href="#good">Що вже добре</a>
-    <a href="#p01">10 проблем і рішень</a>
+    <a href="#critical">Критичні зміни</a>
+    <a href="#p01">Розбір із макетами</a>
+    <a href="#important">Важливі зміни</a>
     <a href="#structure">Нова сторінка</a>
     <a href="#questions">Питання до вас</a>
     <a href="#price">Вартість</a>
@@ -255,7 +282,7 @@ h1,h2,h3,.mont{font-family:'Montserrat',Arial,sans-serif}
   <p class="lead">Сайт продає <b>один продукт</b> — воркшоп за £180 (2 жовтня, Лондон, Holborn, 8–10 місць), але зібраний як <b>магазин на 15 сторінок</b>. Тексти, відгуки й відповіді на питання — сильні. Проблема в іншому: навколо них <b>немає механіки бронювання</b>. На першому екрані немає кнопки, кнопка веде на порожню сторінку, а аналітики й збору email немає зовсім.</p>
   <div class="kpis">
     <div class="kpi"><b class="bad">9</b><span>Критичних проблем</span></div>
-    <div class="kpi"><b class="warn">10</b><span>Зауважень</span></div>
+    <div class="kpi"><b class="warn">10</b><span>Важливих змін</span></div>
     <div class="kpi"><b class="ok">13</b><span>Вже зроблено добре</span></div>
     <div class="kpi"><b>15</b><span>Сторінок на сайті</span></div>
     <div class="kpi"><b>1</b><span>Продукт, який продаємо</span></div>
@@ -276,10 +303,27 @@ h1,h2,h3,.mont{font-family:'Montserrat',Arial,sans-serif}
   </div>
 </section>
 
+<!-- ============ CRITICAL ============ -->
+<section class="slide" id="critical">
+  <img class="silk sm" src="img/silk.png" alt="">
+  <div class="shead"><h2><span class="sev crit">Критично</span>Критичні зміни — у першу чергу<small>Через ці 9 пунктів сайт втрачає бронювання вже зараз. Кожен розібрано далі з макетом «зараз / пропонуємо».</small></h2></div>
+  <div class="crit-grid">
+    <a class="ccard" href="#p01"><div class="top"><span class="n">1</span><span class="go">слайд 01 ↓</span></div><b>На першому екрані немає кнопки</b><p class="now">Заголовок і фото — без ціни, дати й кнопки бронювання.</p><p class="do">дата, ціна й кнопка «Book your place — £180» одразу на першому екрані.</p></a>
+    <a class="ccard" href="#p02"><div class="top"><span class="n">2</span><span class="go">слайд 02 ↓</span></div><b>Cookie-вікно закриває сайт</b><p class="now">При першому візиті затемнює сторінку й займає понад половину екрана телефона.</p><p class="do">тонка смуга внизу, яка не перекриває контент.</p></a>
+    <a class="ccard" href="#p03"><div class="top"><span class="n">3</span><span class="go">слайд 03 ↓</span></div><b>Кнопка веде на порожню сторінку</b><p class="now">Опис товару — 0 символів: ні дати, ні адреси, ні умов.</p><p class="do">бронювання прямо на сторінці з усіма деталями поруч із кнопкою.</p></a>
+    <a class="ccard" href="#p04"><div class="top"><span class="n">4</span><span class="go">слайд 04 ↓</span></div><b>Неправильна дата на сторінці оплати</b><p class="now">Написано «Starts in September», а воркшоп — 2 жовтня.</p><p class="do">одна правильна дата на всіх сторінках.</p></a>
+    <a class="ccard" href="#p05"><div class="top"><span class="n">5</span><span class="go">слайд 05 ↓</span></div><b>Email-адреси не збираються</b><p class="now">Klaviyo встановлений, але на сайті немає жодної форми.</p><p class="do">лист очікування + 3 автоматичні листи.</p></a>
+    <a class="ccard" href="#p06"><div class="top"><span class="n">6</span><span class="go">слайд 06 ↓</span></div><b>Немає аналітики й пікселів</b><p class="now">Ні Meta Pixel, ні GA4 — не видно, звідки бронювання, реклама наосліп.</p><p class="do">GA4 + Meta Pixel + Conversions API.</p></a>
+    <a class="ccard" href="#p07"><div class="top"><span class="n">7</span><span class="go">слайд 07 ↓</span></div><b>Сторінки-заглушки в Google</b><p class="now">«Placeholder heading» на /pages/contact і /pages/bread-course, «Test article» у блозі.</p><p class="do">видалити або заповнити до запуску реклами.</p></a>
+    <a class="ccard" href="#p07"><div class="top"><span class="n">8</span><span class="go">слайд 07 ↓</span></div><b>Пекарня на тому ж сайті</b><p class="now">/pages/about-me і /pages/courses — про безглютенову випічку, а не про практику.</p><p class="do">окремий домен або чітко відокремлений розділ.</p></a>
+    <a class="ccard" href="#p08"><div class="top"><span class="n">9</span><span class="go">слайд 08 ↓</span></div><b>Повільно на телефоні</b><p class="now">Головний екран зʼявляється за 6,6 с (PageSpeed, мобільний — 68/100).</p><p class="do">стиснути фото й відкласти скрипти — ціль до 2,5 с.</p></a>
+  </div>
+</section>
+
 <!-- ============ 01 ============ -->
 <section class="slide" id="p01">
   <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><span class="num">01</span><h2>На першому екрані немає кнопки бронювання</h2></div>
+  <div class="shead"><span class="num">01</span><h2><span class="sev crit">Критично</span>На першому екрані немає кнопки бронювання</h2></div>
   <div class="pbody">
     <div class="txt t1"><div class="lbl"><span class="pill">Зараз</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
       <p>Перший екран — заголовок, підпис і фото. Немає кнопки, ціни й дати: людині нема за що «зачепитися», щоб записатися.</p></div>
@@ -308,7 +352,7 @@ h1,h2,h3,.mont{font-family:'Montserrat',Arial,sans-serif}
 <!-- ============ 02 ============ -->
 <section class="slide" id="p02">
   <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><span class="num">02</span><h2>Cookie-вікно закриває перший екран</h2></div>
+  <div class="shead"><span class="num">02</span><h2><span class="sev crit">Критично</span>Cookie-вікно закриває перший екран</h2></div>
   <div class="pbody">
     <div class="txt t1"><div class="lbl"><span class="pill">Зараз</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
       <p>При першому візиті вікно згоди на cookie затемнює сайт і на телефоні займає <b>понад половину екрана</b>.</p><p>Саме так сайт бачить кожен новий відвідувач — і з реклами, і з Instagram.</p></div>
@@ -327,7 +371,7 @@ h1,h2,h3,.mont{font-family:'Montserrat',Arial,sans-serif}
 <!-- ============ 03 ============ -->
 <section class="slide" id="p03">
   <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><span class="num">03</span><h2>Кнопка веде на порожню сторінку товару</h2></div>
+  <div class="shead"><span class="num">03</span><h2><span class="sev crit">Критично</span>Кнопка веде на порожню сторінку товару</h2></div>
   <div class="pbody">
     <div class="txt t1"><div class="lbl"><span class="pill">Зараз</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
       <p>Усі кнопки «Book your place» ведуть на стандартну сторінку Shopify. <b>Опис порожній</b> — ні дати, ні адреси, ні умов.</p><p>Ще й обовʼязкове поле телефону без пояснення, навіщо він.</p></div>
@@ -363,7 +407,7 @@ h1,h2,h3,.mont{font-family:'Montserrat',Arial,sans-serif}
 <!-- ============ 04 ============ -->
 <section class="slide" id="p04">
   <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><span class="num">04</span><h2>Дата й назва суперечать одна одній</h2></div>
+  <div class="shead"><span class="num">04</span><h2><span class="sev crit">Критично</span>Дата й назва суперечать одна одній</h2></div>
   <div class="pbody">
     <div class="txt t1"><div class="lbl"><span class="pill">Зараз</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
       <p>На сторінці оплати написано <b>«Starts in September»</b>, а воркшоп — 2 жовтня.</p><p>Назва — «Workshop October 2d» (з помилкою), а адреса сторінки — /1-group-session-in-london.</p></div>
@@ -394,58 +438,7 @@ h1,h2,h3,.mont{font-family:'Montserrat',Arial,sans-serif}
 <!-- ============ 05 ============ -->
 <section class="slide" id="p05">
   <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><span class="num">05</span><h2>На телефоні кнопка губиться під час гортання</h2></div>
-  <div class="pbody">
-    <div class="txt t1"><div class="lbl"><span class="pill">Зараз</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
-      <p>Головна на телефоні — <b>понад 11 екранів</b> гортання: проблема, результати, регалії, відгуки, FAQ.</p><p>Коли людина вирішила записатися, кнопки на екрані часто немає — треба шукати.</p></div>
-    <div class="v1"><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div>
-      <div class="view"><img class="shot" src="img/now-screen2.jpg" alt="Середина головної сторінки без кнопки на екрані"></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
-    <div class="txt t2"><div class="lbl"><span class="pill">Пропонуємо</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
-      <p><b>Закріплена панель унизу:</b> назва, дата, ціна, кількість місць і кнопка «Book».</p></div>
-    <div class="v2"><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div>
-      <div class="view"><img class="shot" src="img/now-screen2.jpg" alt=""><div class="m-sticky"><div><b>Return to Yourself</b><span>Fri 2 Oct · £180 · 8–10 places</span></div><a>Book</a></div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
-    <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>Записатися можна з будь-якого місця сторінки — саме в ту мить, коли рішення вже прийняте.</p>
-        <div class="stats"><div><b>1 дотик</b><span>до бронювання з будь-якого блоку</span></div><div><b>Уся сторінка</b><span>з кнопкою на екрані</span></div></div></div></div>
-  </div>
-</section>
-
-<!-- ============ 06 ============ -->
-<section class="slide" id="p06">
-  <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><span class="num">06</span><h2>Сильні відгуки — без облич і дат</h2></div>
-  <div class="pbody">
-    <div class="txt t1"><div class="lbl"><span class="pill">Зараз</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
-      <p>6 детальних відгуків — але <b>без фото авторок і без дат</b>.</p><p>Через це вони читаються як текст сайту, а не як слова реальних учасниць.</p></div>
-    <div class="v1"><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div>
-      <div class="view"><img class="shot" src="img/now-reviews.jpg" alt="Відгук без фото на сайті"></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
-    <div class="txt t2"><div class="lbl"><span class="pill">Пропонуємо</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
-      <p>Фото або імʼя з ініціалом до кожного відгуку <b>(за згодою учасниць)</b>, місце й дата воркшопу. Згодом — застосунок для збору нових відгуків.</p></div>
-    <div class="v2"><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div>
-      <div class="view"><div class="mock" style="background:#FAFAFA">
-        <div class="m-pad">
-          <div class="m-h2">Reviews</div>
-          <div class="m-rev"><div class="m-rev-top"><div class="m-ava">T</div><div><b>Tais</b><span>Workshop participant · London</span></div></div>
-            <p>“At the start, my anxiety level was 9 out of 10. I wanted to run away… By the end I just burst into tears — it felt so good, like I'd found freedom.”</p>
-            <div class="m-ph">participant photo — with permission</div></div>
-          <div class="m-rev"><div class="m-rev-top"><div class="m-ava">O</div><div><b>Olga</b><span>Workshop participant · London</span></div></div>
-            <p>“The circle of women was something special — like a glowing circle floating above the ground!”</p>
-            <div class="m-ph">participant photo — with permission</div></div>
-          <div class="m-rev"><div class="m-rev-top"><div class="m-ava">N</div><div><b>Natalia</b><span>Workshop participant · London</span></div></div>
-            <p>“This practice was exactly what I needed!!! … By the end, I felt lightness and freedom.”</p>
-            <div class="m-ph">participant photo — with permission</div></div>
-        </div>
-      </div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
-    <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
-      <div class="card"><p>Відгуки стають доказом, якому вірять. Для практики, де людина відкривається, це особливо важливо.</p>
-        <div class="stats"><div><b>6 відгуків</b><span>уже є — писати нічого не треба</span></div><div><b>+ фото й дата</b><span>до кожного</span></div></div></div></div>
-  </div>
-</section>
-
-<!-- ============ 07 ============ -->
-<section class="slide" id="p07">
-  <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><span class="num">07</span><h2>Контакти зацікавлених не збираються</h2></div>
+  <div class="shead"><span class="num">05</span><h2><span class="sev crit">Критично</span>Контакти зацікавлених не збираються</h2></div>
   <div class="pbody">
     <div class="txt t1"><div class="lbl"><span class="pill">Зараз</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
       <p>Klaviyo встановлений і завантажується на кожній сторінці, але на сайті <b>немає жодного поля для email</b>.</p><p>Хто не забронював одразу — втрачений назавжди.</p></div>
@@ -480,10 +473,10 @@ h1,h2,h3,.mont{font-family:'Montserrat',Arial,sans-serif}
   </div>
 </section>
 
-<!-- ============ 08 ============ -->
-<section class="slide" id="p08">
+<!-- ============ 06 ============ -->
+<section class="slide" id="p06">
   <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><span class="num">08</span><h2>Немає аналітики й рекламних пікселів</h2></div>
+  <div class="shead"><span class="num">06</span><h2><span class="sev crit">Критично</span>Немає аналітики й рекламних пікселів</h2></div>
   <div class="pbody">
     <div class="txt t1"><div class="lbl"><span class="pill">Зараз</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
       <p>Є лише вбудовані звіти Shopify. <b>Неможливо побачити</b>, звідки приходять бронювання, і показати рекламу тим, хто вже був на сайті.</p><p>Будь-яка реклама зараз — наосліп.</p></div>
@@ -511,10 +504,10 @@ h1,h2,h3,.mont{font-family:'Montserrat',Arial,sans-serif}
   </div>
 </section>
 
-<!-- ============ 09 ============ -->
-<section class="slide" id="p09">
+<!-- ============ 07 ============ -->
+<section class="slide" id="p07">
   <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><span class="num">09</span><h2>Заглушки й інша справа на тому ж сайті</h2></div>
+  <div class="shead"><span class="num">07</span><h2><span class="sev crit">Критично</span>Заглушки й інша справа на тому ж сайті</h2></div>
   <div class="pbody wide">
     <div class="txt t1"><div class="lbl"><span class="pill">Зараз</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
       <p>Сторінка контактів показує <b>«Placeholder heading»</b>, /pages/bread-course — теж заглушка, у блозі — «Test article».</p><p>А /pages/about-me і /pages/courses розповідають про <b>безглютенову пекарню</b>. Усе це відкрито й індексується Google.</p></div>
@@ -540,10 +533,10 @@ h1,h2,h3,.mont{font-family:'Montserrat',Arial,sans-serif}
   </div>
 </section>
 
-<!-- ============ 10 ============ -->
-<section class="slide" id="p10">
+<!-- ============ 08 ============ -->
+<section class="slide" id="p08">
   <img class="silk sm" src="img/silk.png" alt="">
-  <div class="shead"><span class="num">10</span><h2>Повільно на телефоні й не видно в пошуку</h2></div>
+  <div class="shead"><span class="num">08</span><h2><span class="sev crit">Критично</span>Повільно на телефоні й не видно в пошуку</h2></div>
   <div class="pbody">
     <div class="txt t1"><div class="lbl"><span class="pill">Зараз</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
       <p>За Google PageSpeed на телефоні головний екран зʼявляється за <b>6,6 с</b> (на компʼютері — 100/100).</p><p>На головній немає заголовка H1, а title сторінки — просто «Lina Burduk».</p></div>
@@ -565,6 +558,75 @@ h1,h2,h3,.mont{font-family:'Montserrat',Arial,sans-serif}
     <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
       <div class="card"><p>Сторінка швидко відкривається там, куди переходять з Instagram, — на телефоні. І її знаходять ті, хто шукає таку практику в Лондоні.</p>
         <div class="stats"><div><b>6,6 → 2,5 с</b><span>ціль для телефона</span></div><div><b>1 H1</b><span>з ключовими словами</span></div></div></div></div>
+  </div>
+</section>
+
+<!-- ============ 09 ============ -->
+<section class="slide" id="p09">
+  <img class="silk sm" src="img/silk.png" alt="">
+  <div class="shead"><span class="num">09</span><h2><span class="sev imp">Важливо</span>На телефоні кнопка губиться під час гортання</h2></div>
+  <div class="pbody">
+    <div class="txt t1"><div class="lbl"><span class="pill">Зараз</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
+      <p>Головна на телефоні — <b>понад 11 екранів</b> гортання: проблема, результати, регалії, відгуки, FAQ.</p><p>Коли людина вирішила записатися, кнопки на екрані часто немає — треба шукати.</p></div>
+    <div class="v1"><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div>
+      <div class="view"><img class="shot" src="img/now-screen2.jpg" alt="Середина головної сторінки без кнопки на екрані"></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
+    <div class="txt t2"><div class="lbl"><span class="pill">Пропонуємо</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
+      <p><b>Закріплена панель унизу:</b> назва, дата, ціна, кількість місць і кнопка «Book».</p></div>
+    <div class="v2"><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div>
+      <div class="view"><img class="shot" src="img/now-screen2.jpg" alt=""><div class="m-sticky"><div><b>Return to Yourself</b><span>Fri 2 Oct · £180 · 8–10 places</span></div><a>Book</a></div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
+    <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
+      <div class="card"><p>Записатися можна з будь-якого місця сторінки — саме в ту мить, коли рішення вже прийняте.</p>
+        <div class="stats"><div><b>1 дотик</b><span>до бронювання з будь-якого блоку</span></div><div><b>Уся сторінка</b><span>з кнопкою на екрані</span></div></div></div></div>
+  </div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="slide" id="p10">
+  <img class="silk sm" src="img/silk.png" alt="">
+  <div class="shead"><span class="num">10</span><h2><span class="sev imp">Важливо</span>Сильні відгуки — без облич і дат</h2></div>
+  <div class="pbody">
+    <div class="txt t1"><div class="lbl"><span class="pill">Зараз</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
+      <p>6 детальних відгуків — але <b>без фото авторок і без дат</b>.</p><p>Через це вони читаються як текст сайту, а не як слова реальних учасниць.</p></div>
+    <div class="v1"><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div>
+      <div class="view"><img class="shot" src="img/now-reviews.jpg" alt="Відгук без фото на сайті"></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
+    <div class="txt t2"><div class="lbl"><span class="pill">Пропонуємо</span><svg class="conn" viewBox="0 0 54 12"><path d="M0 6h50M45 1.5 50 6l-5 4.5" fill="none" stroke="#6d6d6d" stroke-width="1.5"/></svg></div>
+      <p>Фото або імʼя з ініціалом до кожного відгуку <b>(за згодою учасниць)</b>, місце й дата воркшопу. Згодом — застосунок для збору нових відгуків.</p></div>
+    <div class="v2"><div class="phone"><div class="screen"><div class="island"></div><div class="sbar"><span>9:41</span><svg viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#111"/><rect x="2" y="2" width="16" height="7" rx="1.5" fill="#111"/><rect x="21.5" y="3.5" width="1.8" height="4" rx=".9" fill="#111"/></svg></div>
+      <div class="view"><div class="mock" style="background:#FAFAFA">
+        <div class="m-pad">
+          <div class="m-h2">Reviews</div>
+          <div class="m-rev"><div class="m-rev-top"><div class="m-ava">T</div><div><b>Tais</b><span>Workshop participant · London</span></div></div>
+            <p>“At the start, my anxiety level was 9 out of 10. I wanted to run away… By the end I just burst into tears — it felt so good, like I'd found freedom.”</p>
+            <div class="m-ph">participant photo — with permission</div></div>
+          <div class="m-rev"><div class="m-rev-top"><div class="m-ava">O</div><div><b>Olga</b><span>Workshop participant · London</span></div></div>
+            <p>“The circle of women was something special — like a glowing circle floating above the ground!”</p>
+            <div class="m-ph">participant photo — with permission</div></div>
+          <div class="m-rev"><div class="m-rev-top"><div class="m-ava">N</div><div><b>Natalia</b><span>Workshop participant · London</span></div></div>
+            <p>“This practice was exactly what I needed!!! … By the end, I felt lightness and freedom.”</p>
+            <div class="m-ph">participant photo — with permission</div></div>
+        </div>
+      </div></div><div class="url"><span>linaburduk.com</span></div></div></div></div>
+    <div class="cardcol"><div class="benefit-top"><span class="pill">Користь</span><span class="arrow"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M7 1v13M1.5 8.5 7 14l5.5-5.5" fill="none" stroke="#444" stroke-width="1.6"/></svg></span></div>
+      <div class="card"><p>Відгуки стають доказом, якому вірять. Для практики, де людина відкривається, це особливо важливо.</p>
+        <div class="stats"><div><b>6 відгуків</b><span>уже є — писати нічого не треба</span></div><div><b>+ фото й дата</b><span>до кожного</span></div></div></div></div>
+  </div>
+</section>
+
+<!-- ============ IMPORTANT ============ -->
+<section class="slide" id="important">
+  <img class="silk sm" src="img/silk.png" alt="">
+  <div class="shead"><h2><span class="sev imp">Важливо</span>Важливі зміни — другою чергою<small>Не блокують бронювання, але помітно посилюють довіру й конверсію. Усі входять у роботу.</small></h2></div>
+  <div class="imp-grid">
+    <div class="irow"><i>1</i><div><b>Кнопка губиться під час гортання</b><span>Робимо: закріплена панель бронювання внизу екрана. <em>слайд 09</em></span></div></div>
+    <div class="irow"><i>2</i><div><b>Відгуки без фото й дат</b><span>Робимо: фото або імʼя з ініціалом (за згодою), дата воркшопу. <em>слайд 10</em></span></div></div>
+    <div class="irow"><i>3</i><div><b>Обовʼязкове поле «Phone number *» до кошика</b><span>Робимо: необовʼязкове або з поясненням, навіщо телефон. <em>слайд 04</em></span></div></div>
+    <div class="irow"><i>4</i><div><b>Назва «Workshop October 2d» з помилкою</b><span>Робимо: «Dance Movement Workshop “Return to Yourself”» і відповідна адреса сторінки. <em>слайд 04</em></span></div></div>
+    <div class="irow"><i>5</i><div><b>На головній немає H1, title — просто «Lina Burduk»</b><span>Робимо: H1 і title з ключовими словами — Dance Movement Workshop, London. <em>слайд 08</em></span></div></div>
+    <div class="irow"><i>6</i><div><b>Кількість місць майже не видно</b><span>«Only 8–10 spots» згадано один раз посеред головної — немає ні на першому екрані, ні на сторінці оплати. Робимо: місця поруч із кожною кнопкою.</span></div></div>
+    <div class="irow"><i>7</i><div><b>2 порожні колекції в пошуку Google</b><span>/collections/dance-movement-therapy-london і /collections/online-sessions-dmt показують «No products found». Робимо: прибрати або наповнити.</span></div></div>
+    <div class="irow"><i>8</i><div><b>«Read more» веде на головну</b><span>Посилання в блоці результатів перезавантажує сторінку й скидає прокрутку. Робимо: розкривати текст на місці.</span></div></div>
+    <div class="irow"><i>9</i><div><b>Вибір із 30+ країн — але всюди £</b><span>Для воркшопу в Лондоні це зайве в шапці. Робимо: прибрати, лишити перемикач EN / RU.</span></div></div>
+    <div class="irow"><i>10</i><div><b>Прев'ю для соцмереж через http://</b><span>Лінк в Instagram, Facebook чи WhatsApp може показатися без картинки. Робимо: перевести на https.</span></div></div>
   </div>
 </section>
 
